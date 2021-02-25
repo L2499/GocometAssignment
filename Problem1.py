@@ -77,6 +77,8 @@ def taskToDo():
             #     driver.find_element_by_xpath('//*[@id="p_36/1318507031"]/span/a/span').click()
             # else:
             #     print("Rich Boi")
+
+
             headers = {
                 'User-Agent': 'My User Agent 1.0',
                 'From': 'vinaygovekar24@gmail.com'
@@ -97,11 +99,11 @@ def taskToDo():
                 # print(ratings[i + 1].text)
                 # print(timeT[i + 1].text.lstrip().rstrip().split("Get it by")[-1].split("FREE")[0].rstrip())
                 if ProductEntry.get() == "Mobile" or ProductEntry.get() == "Mobiles" or ProductEntry.get() == "mobile" or ProductEntry.get() == "mobiles":
-                    AmazonMobileData.append([Name[i].text, Price[i + 3].text, ratings[i + 1].text,
+                    AmazonMobileData.append([Name[i].text, Price[i + 3].text,"Amazon", ratings[i + 1].text,
                                              timeT[i + 1].text.lstrip().rstrip().split("Get it by")[-1].split("FREE")[
                                                  0].rstrip()])
                 else:
-                    AmazonMobileData.append([Name[i].text, Price[i].text, ratings[i + 1].text,
+                    AmazonMobileData.append([Name[i].text, Price[i].text,"Amazon", ratings[i + 1].text,
                                              timeT[i + 1].text.lstrip().rstrip().split("Get it by")[-1].split("FREE")[
                                                  0].rstrip()])
 
@@ -112,12 +114,51 @@ def taskToDo():
                 AmazonMobileData[m].append(linkref)
                 m += 1
 
-            df = pd.DataFrame(AmazonMobileData, columns=['Name', 'Price', 'Rating', 'Delivery', 'Ref Link'])
+            df = pd.DataFrame(AmazonMobileData, columns=['Name', 'Price','Source','Rating', 'Delivery', 'Ref Link'])
 
-            print(df)
+            # df = pd.read_csv('ScrappedData.csv')
+            # AmazonMobileData = df.values.tolist()
             df.to_csv('ScrappedData.csv', index=False)
-            time.sleep(5)
+
+            FlipkartData = []
+
+            for i in range(0,len(AmazonMobileData)):
+                time.sleep(5)
+                driver.get("https://www.flipkart.com/")
+                try:
+                    driver.find_element_by_xpath('/html/body/div[2]/div/div/button').click()
+                except:
+                    print(".")
+                time.sleep(2)
+                # print(AmazonMobileData[i][0].split("(")[0])
+                driver.find_element_by_xpath(
+                    '//*[@id="container"]/div/div[1]/div[1]/div[2]/div[2]/form/div/div/input').send_keys(
+                    AmazonMobileData[i][0].split(")")[0])
+                time.sleep(2)
+                driver.find_element_by_xpath(
+                    '//*[@id="container"]/div/div[1]/div[1]/div[2]/div[2]/form/div/button').click()
+                time.sleep(2)
+                headers = {
+                    'User-Agent': 'My User Agent 1.0',
+                    'From': 'vinaygovekar24@gmail.com'
+                }
+                url = driver.current_url
+                time.sleep(2)
+                req = requests.get(url, headers=headers)
+                soup2 = bs4.BeautifulSoup(req.text, features="html.parser")
+                time.sleep(2)
+                try:
+                    FlipkartPrice = soup2.select('._30jeq3._1_WHN1')
+                    FlipkartData.append(FlipkartPrice[0].text)
+                except:
+                    print("Webpage error")
+            print(FlipkartData)
             driver.quit()
+            for i in range(len(AmazonMobileData)):
+                if int(FlipkartData[i][1:]) > int(AmazonMobileData[i][1]):
+                    print("FlipKart better")
+                else:
+                    print("Amazon Better")
             root.quit()
 
 root = tk.Tk()
