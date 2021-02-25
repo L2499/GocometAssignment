@@ -118,9 +118,10 @@ def taskToDo():
 
             # df = pd.read_csv('ScrappedData.csv')
             # AmazonMobileData = df.values.tolist()
-            df.to_csv('ScrappedData.csv', index=False)
+            df.to_csv('Problem1and2.csv', index=False)
 
             FlipkartData = []
+            FlipkartUrl = []
 
             for i in range(0,len(AmazonMobileData)):
                 time.sleep(5)
@@ -150,15 +151,27 @@ def taskToDo():
                 try:
                     FlipkartPrice = soup2.select('._30jeq3._1_WHN1')
                     FlipkartData.append(FlipkartPrice[0].text)
+                    FlipkartUrl.append(driver.current_url)
                 except:
+                    FlipkartUrl.append("None")
+                    FlipkartData.append("20000,00")
                     print("Webpage error")
             print(FlipkartData)
+            finalData=AmazonMobileData
             driver.quit()
-            for i in range(len(AmazonMobileData)):
-                if int(FlipkartData[i][1:]) > int(AmazonMobileData[i][1]):
-                    print("FlipKart better")
-                else:
-                    print("Amazon Better")
+            try:
+                for i in range(len(AmazonMobileData)):
+                    if int("".join(FlipkartData[i][1:].split(","))) < int("".join(AmazonMobileData[i][1].split(","))):
+                        finalData[i][1]="".join(FlipkartData[i][1:].split(","))
+                        finalData[i][2]="Flipkart"
+                        finalData[i][5]=FlipkartUrl[i]
+                        print("FlipKart better")
+                    else:
+                        print("Amazon Better")
+            except:
+                print("Er")
+            df2 = pd.DataFrame(finalData, columns=['Name', 'Price','Least Price Source','Rating', 'Delivery', 'Ref Link'])
+            df2.to_csv("Problem3.csv",index=False)
             root.quit()
 
 root = tk.Tk()
@@ -183,7 +196,7 @@ NumTup=[]
 intg = tk.IntVar()
 NumTup = [i for i in range(10,51)]
 NumEntry = ttk.Combobox(root,state="readonly", width=27,textvariable=intg)
-NumEntry['values'] = tuple(NumTup)
+NumEntry['values'] = tuple([10])
 NumEntry.current(0)
 NumEntry.place(x=150,y=90)
 
