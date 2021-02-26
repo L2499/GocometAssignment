@@ -98,7 +98,7 @@ def taskToDo():
                 # print(Name[i].text)
                 # print(ratings[i + 1].text)
                 # print(timeT[i + 1].text.lstrip().rstrip().split("Get it by")[-1].split("FREE")[0].rstrip())
-                    AmazonMobileData.append([Name[i].text, Price[i].text, "Amazon", ratings[i + 1].text,timeT[i + 1].text.lstrip().rstrip().split("Get it by")[-1].split("FREE")[0].rstrip()])
+                    AmazonMobileData.append([Name[i].text, Price[i].text, "Amazon", ratings[i + 1].text,ProductEntry.get(),timeT[i + 1].text.lstrip().rstrip().split("Get it by")[-1].split("FREE")[0].rstrip()])
             #     if ProductEntry.get() == "Mobile" or ProductEntry.get() == "Mobiles" or ProductEntry.get() == "mobile" or ProductEntry.get() == "mobiles":
             #         AmazonMobileData.append([Name[i].text, Price[i + 3].text,"Amazon", ratings[i + 1].text,
             #                                  timeT[i + 1].text.lstrip().rstrip().split("Get it by")[-1].split("FREE")[
@@ -113,7 +113,7 @@ def taskToDo():
                 AmazonMobileData[m].append(linkref)
                 m += 1
 
-            df = pd.DataFrame(AmazonMobileData, columns=['Name', 'Price','Source','Rating', 'Delivery', 'Ref Link'])
+            df = pd.DataFrame(AmazonMobileData, columns=['Name', 'Price','Source','Rating','Category', 'Delivery', 'Ref Link'])
 
             # df = pd.read_csv('ScrappedData.csv')
             # AmazonMobileData = df.values.tolist()
@@ -169,7 +169,7 @@ def taskToDo():
                         print("Amazon Better")
             except:
                 print("Er")
-            df2 = pd.DataFrame(finalData, columns=['Name', 'Price','Least Price Source','Rating', 'Delivery', 'Ref Link'])
+            df2 = pd.DataFrame(finalData, columns=['Name', 'Price','Least Price Source','Rating','Category' ,'Delivery', 'Ref Link'])
             df2.to_csv("Problem3Solution.csv",index=False)
             root.quit()
 
