@@ -90,12 +90,7 @@ def taskToDo():
 
             ###DONE
             Name = soup.select('.a-size-medium.a-color-base.a-text-normal')
-
-
             Price = soup.select('.a-price-whole')
-            # for i in range(0,len(Price)):
-            #     print(Price[i].text)
-
             ratings = soup.select('.a-popover-trigger.a-declarative')
             timeT = soup.select('.a-row.s-align-children-center')
             AmazonMobileData = []
@@ -160,7 +155,7 @@ def taskToDo():
                     FlipkartUrl.append("None")
                     FlipkartData.append("20000,00")
                     print("Webpage error")
-            print(FlipkartData)
+            # print(FlipkartData)
             finalData=AmazonMobileData
             driver.quit()
             try:
