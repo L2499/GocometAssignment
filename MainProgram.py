@@ -113,7 +113,7 @@ def taskToDo():
                 AmazonMobileData[m].append(linkref)
                 m += 1
 
-            df = pd.DataFrame(AmazonMobileData, columns=['Name', 'Price','Source','Rating','Category', 'Delivery', 'Ref Link'])
+            df = pd.DataFrame(AmazonMobileData, columns=['Name', 'Price','Source','Rating','Category', 'Delivery', 'Product Link'])
 
             # df = pd.read_csv('ScrappedData.csv')
             # AmazonMobileData = df.values.tolist()
@@ -169,7 +169,7 @@ def taskToDo():
                         print("Amazon Better")
             except:
                 print("Er")
-            df2 = pd.DataFrame(finalData, columns=['Name', 'Price','Least Price Source','Rating','Category' ,'Delivery', 'Ref Link'])
+            df2 = pd.DataFrame(finalData, columns=['Name', 'Price','Least Price Source','Rating','Category' ,'Delivery', 'Product Link'])
             df2.to_csv("Problem3Solution.csv",index=False)
             root.quit()
 

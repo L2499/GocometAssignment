@@ -4,8 +4,6 @@
     <list default="true" id="9eca95be-03ae-4ee5-80f1-56fe9659e082" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MainProgram.py" beforeDir="false" afterPath="$PROJECT_DIR$/MainProgram.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Problem1and2Solution.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Problem1and2Solution.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Problem3Solution.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Problem3Solution.csv" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -18,8 +16,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/MainProgram.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="278">
-              <caret line="100" column="52" lean-forward="true" selection-start-line="100" selection-start-column="52" selection-end-line="100" selection-end-column="52" />
+            <state relative-caret-position="228">
+              <caret line="171" column="129" selection-start-line="171" selection-start-column="129" selection-end-line="171" selection-end-column="129" />
               <folding>
                 <element signature="e#0#20#0" expanded="true" />
               </folding>
@@ -223,18 +221,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Test1.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/MainProgram.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="278">
-          <caret line="100" column="52" lean-forward="true" selection-start-line="100" selection-start-column="52" selection-end-line="100" selection-end-column="52" />
+        <state relative-caret-position="228">
+          <caret line="171" column="129" selection-start-line="171" selection-start-column="129" selection-end-line="171" selection-end-column="129" />
           <folding>
             <element signature="e#0#20#0" expanded="true" />
           </folding>
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Test1.py">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
 </project>
