@@ -118,7 +118,7 @@ def taskToDo():
 
             # df = pd.read_csv('ScrappedData.csv')
             # AmazonMobileData = df.values.tolist()
-            df.to_csv('Problem1and2.csv', index=False)
+            df.to_csv('Problem1and2Solution.csv', index=False)
 
             FlipkartData = []
             FlipkartUrl = []
@@ -171,7 +171,7 @@ def taskToDo():
             except:
                 print("Er")
             df2 = pd.DataFrame(finalData, columns=['Name', 'Price','Least Price Source','Rating', 'Delivery', 'Ref Link'])
-            df2.to_csv("Problem3.csv",index=False)
+            df2.to_csv("Problem3Solution.csv",index=False)
             root.quit()
 
 root = tk.Tk()
