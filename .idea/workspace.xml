@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9eca95be-03ae-4ee5-80f1-56fe9659e082" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/FinalData.csv" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Problem1.py" beforeDir="false" afterPath="$PROJECT_DIR$/Problem1.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Problem1and2.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Problem3.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ScrappedData.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Problem1and2Solution.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Problem1and2Solution.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Problem3Solution.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Problem3Solution.csv" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -19,8 +17,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Problem1.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="248">
-              <caret line="90" column="19" lean-forward="true" selection-start-line="90" selection-start-column="19" selection-end-line="90" selection-end-column="19" />
+            <state relative-caret-position="1737">
+              <caret line="108" column="44" lean-forward="true" selection-start-line="108" selection-start-column="44" selection-end-line="108" selection-end-column="44" />
               <folding>
                 <element signature="e#0#20#0" expanded="true" />
               </folding>
@@ -71,6 +69,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -82,7 +81,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -171,7 +169,7 @@
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.328594" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.328594" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -207,8 +205,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Problem1.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="248">
-          <caret line="90" column="19" lean-forward="true" selection-start-line="90" selection-start-column="19" selection-end-line="90" selection-end-column="19" />
+        <state relative-caret-position="1737">
+          <caret line="108" column="44" lean-forward="true" selection-start-line="108" selection-start-column="44" selection-end-line="108" selection-end-column="44" />
           <folding>
             <element signature="e#0#20#0" expanded="true" />
           </folding>

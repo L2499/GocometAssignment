@@ -90,7 +90,12 @@ def taskToDo():
 
             ###DONE
             Name = soup.select('.a-size-medium.a-color-base.a-text-normal')
+
+
             Price = soup.select('.a-price-whole')
+            # for i in range(0,len(Price)):
+            #     print(Price[i].text)
+
             ratings = soup.select('.a-popover-trigger.a-declarative')
             timeT = soup.select('.a-row.s-align-children-center')
             AmazonMobileData = []
@@ -98,14 +103,13 @@ def taskToDo():
                 # print(Name[i].text)
                 # print(ratings[i + 1].text)
                 # print(timeT[i + 1].text.lstrip().rstrip().split("Get it by")[-1].split("FREE")[0].rstrip())
-                if ProductEntry.get() == "Mobile" or ProductEntry.get() == "Mobiles" or ProductEntry.get() == "mobile" or ProductEntry.get() == "mobiles":
-                    AmazonMobileData.append([Name[i].text, Price[i + 3].text,"Amazon", ratings[i + 1].text,
-                                             timeT[i + 1].text.lstrip().rstrip().split("Get it by")[-1].split("FREE")[
-                                                 0].rstrip()])
-                else:
-                    AmazonMobileData.append([Name[i].text, Price[i].text,"Amazon", ratings[i + 1].text,
-                                             timeT[i + 1].text.lstrip().rstrip().split("Get it by")[-1].split("FREE")[
-                                                 0].rstrip()])
+                    AmazonMobileData.append([Name[i].text, Price[i].text, "Amazon", ratings[i + 1].text,timeT[i + 1].text.lstrip().rstrip().split("Get it by")[-1].split("FREE")[0].rstrip()])
+            #     if ProductEntry.get() == "Mobile" or ProductEntry.get() == "Mobiles" or ProductEntry.get() == "mobile" or ProductEntry.get() == "mobiles":
+            #         AmazonMobileData.append([Name[i].text, Price[i + 3].text,"Amazon", ratings[i + 1].text,
+            #                                  timeT[i + 1].text.lstrip().rstrip().split("Get it by")[-1].split("FREE")[
+            #                                      0].rstrip()])
+            #     else:
+            #
 
             link = soup.select('.a-link-normal.a-text-normal')
             m = 0
