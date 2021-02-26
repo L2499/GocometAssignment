@@ -4,7 +4,9 @@ Steps:
 2. Install all the packages mentioned in requirement.txt
 3. run MainProgram.py
 
-Problem 1 and 2: Solution in Problem1and2.csv
+Assignment timeline :- GocometTimeline.pdf
+
+Problem 1 and 2: Solution in Problem1and2.csv [currently limited to 10 products]
 
 Problem 3: Included time delay so it looks like human behaviour
 
